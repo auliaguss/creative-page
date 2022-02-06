@@ -1,38 +1,267 @@
-.App {
-  text-align: center;
+/* birumuda #0cdff6 */
+/* putih kalem #eff6ee */
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 180px;
+  background-color: transparent;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  z-index: 100;
+}
+scg{
+  color: rgba( 255, 255, 255, 0.7) !important;
+}
+.sidebar a {
+  font-weight: 600;
+  display: block;
+  padding: 16px;
+  text-decoration: none;
+  color: rgba( 255, 255, 255, 0.7) !important;
+}
+ 
+.btn-gradient {
+  width: 150px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  height: 55px;
+  text-align:center;
+  border: none;
+  background-size: 300% 100%;
+  margin-left: -10px;
+
+  background-image: linear-gradient(to right,#2b5876, transparent, transparent, #2b5876);
+  
+  box-shadow: 0 25px 45px -20px rgba(43, 88, 118, 0.712);
+
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.btn-gradient:hover {
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.btn-gradient:focus {
+  outline: none;
+}
+
+.nav-icon{
+  border-radius: 9px;
+  margin-right: 10px;
+}
+
+div.content {
+  margin-left: 120px;
+  padding: 1px 16px;
+}
+@media (max-width: 1300px){
+  .nav-text{
+    display: none;
+  }
+  .sidebar a{
+    text-align-last: left;
+  }
+  .sidebar .btn-gradient{
+    padding-left: 30px !important;
+    width: 80px;
+  }
+  .content{
+    margin-left: 50px !important;
+  }
+  table img, table video {
+    max-width: 70px !important;
+    max-height: 70px !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    bottom:0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #1c2135;
+  }
+  .sidebar a, .btn-gradient{
+    padding: 0px;
+    width: 50% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn-gradient{
+    background: #2b5876;
+  }
+  .logo-nav{
+    display: none !important;
+  }
+  
+  /* .sidebar a {float: left;} */
+  .content {
+    margin-left: -15px !important;
+    margin-bottom: 100px !important;
+  }
+  .form-box{
+    margin-left: 25px;
+  }
+  .form-box .container, .table-container{
+    margin-bottom: 60px;
+  }
+  .rank-weekly img,.saved-data img{
+    margin-right:-20px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Palanquin+Dark&display=swap');
+:root {
+    font-size: 16px;
+    font-family: Poppins, sans-serif;
+    --transition-speed: 600ms;
+    --hijautua:#22C1B2;
+    --hijaumuda: #CCF6E2;
+    --hijaumudaop:rgba(204, 246, 226, 0.3);
+    --hijau:#28DBCA;
+    --background: #1c2135;
+    --abu:rgba(204, 246, 226, 0.1);
+    /* --base:#1c2135; */
+    --base:rgb(12,0,28);
+    --logo-dark: #1c2135;
+    --logo-bright:#e6235b;
+    height: -webkit-fill-available;
+}
+*{
+  /* position: relative; */
+  font-family: Poppins,sans-serif;
+  font-weight: 500;
+  /* color: white; */
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: #031426 !important;
+  height: -webkit-fill-available;
+  color: rgba( 255, 255, 255, 0.7) !important;
+}
+.App{
+  z-index: 100;
+  height: -webkit-fill-available;
+  background: url(assets/sprinkle.png);
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.icons{
+  width: 40px !important;
+}
+.list-creative{
+  margin: 20px;
+}
+.search-bar{
+  display: flex;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  margin-bottom: 10px;
+}
+.search-bar svg{
+  margin-top: 8px;
+}
+input:focus, input.form-control:focus, button:focus {
+  outline:none !important;
+  outline-width: 0 !important;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+.list-creative input{
+  background:none;
+  box-shadow: 0 25px 45px rgb(0 0 0 / 10%);
+  border: none;
+  outline: none !important;
+}
+.list-creative input:focus{
+  background: none !important;
+  color: rgba( 255, 255, 255, 0.7);
+}
+.main {
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+table img, table video{
+  max-width: 100px;
+  max-height: 100px;
+}
+a, button{
+  text-decoration: none;
+  transition: .5s;
+  border:2px solid transparent;
+  color:var(--background);
+  cursor: pointer;
+  background: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+::-webkit-scrollbar{
+  width: 5px;
+  transition: 5s;
+}
+::-webkit-scrollbar-thumb{
+  background-image: linear-gradient(to right,#2b5876, transparent);
+  border-radius: 6px;
+}
+.modal-buttons{
+  margin-top: 20px;
+}
+.modal-buttons button, .modal-buttons a{
+  width: 40%;
+}
+.fa-laugh-wink{
+  color: #254e6a !important;
+}
+.btn-outline{
+  border: 1px solid #244b68 !important;
+  background: transparent !important;
+  color: #244b68 !important;
+}
+.btn-primary{
+  background: #244b68 !important;
+  border: none !important;
+}
+.custom-bg-primary{
+  background: #244b68 !important;
+  border: none !important;
+}
+.custom-bg-danger{
+  background: var(--logo-bright) !important;
+  border: none !important;
+}
+.custom-text-primary{
+  color: #244b68 !important;
+}
+.modal-content{
+  border: 0;
+}
+h1{
+  font-family: Consolas;
+  font-weight: 800 !important;
+  text-transform: uppercase;
+  text-align-last: center;
+  margin-bottom: 20px;
+}
+.modal-body{
+  /* cpalette #254e6b 031426  */
+  background: #b7bec4;
+  color: #031426;
 }

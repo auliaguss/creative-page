@@ -1,0 +1,204 @@
+.form-box input, .form-box select{
+  background:none;
+  border: none;
+  border-radius: 0px;
+  color: rgba( 255, 255, 255, 0.7);
+  padding: 0;
+  border-bottom: 1px solid rgba( 255, 255, 255, 0.8);
+  margin-top: 5px;
+}
+.disabled{
+  pointer-events: none;
+  color: gray !important;
+}
+.custom-file .upload{
+  font-weight: 600 !important;
+  cursor: pointer;
+}
+.custom-file svg{
+  margin-right: 5px;
+}
+.form-group{
+  margin-bottom: 18px;
+}
+.date-picker input[type="text"]:disabled {
+  color: gray !important;
+}
+.form-box input:focus, .form-box select:focus, button:focus{
+    background:none;
+    outline: none;
+    box-shadow: none;
+    color: rgba( 255, 255, 255, 0.8);
+}
+  .form-box {
+    animation: loadProfile 0.6s ease-in-out;
+    animation-fill-mode: both;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    max-height: 750px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .form-bg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #142133;
+    width: calc(100% - 75px);
+    height: calc(100% - 110px);
+
+    box-shadow: 0 25px 45px rgb(0 0 0 / 10%);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+  }
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    width: 100%;
+  } 
+  .form-image-solid, .form-image {
+    animation: loadProfileImage 1s ease-in-out 0.5s;
+    animation-fill-mode: both;
+    margin-top: 40px;
+    position: relative;
+    flex: none;
+    background-size: cover;
+    background-position: center;
+  }
+  .form-box label{
+    color: rgba( 255, 255, 255, 0.7);
+  }
+  .form-image{
+    max-height: 280px !important;
+    max-width: 80% !important;
+    background-position: center;
+    }
+    .form-image-solid  {
+    width: 45%;
+    height: 350px;
+    box-shadow: 0 25px 45px -20px rgba(230, 35, 90, 0.712);
+    }
+  .form-image-solid::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: rgba(230, 35, 90, 1);
+    mix-blend-mode: screen;
+  }
+  .form-box select{
+    margin-right: 10px;
+  }
+  .form-box select option{
+    color: #0b1c2d !important;
+  }
+  .form-text {
+    margin-top: 100px !important;
+    padding: 4% 4% 1% 4%;
+    position: relative;
+    width: inherit;
+  }
+  
+  .form-text h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0.7rem;
+    position: absolute;
+    animation-fill-mode: both;
+  }
+  
+  .form-text h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    margin-top: 0;
+    margin-bottom: 5%;
+  }
+  .form-text h2 {
+    color: #f63d47;
+  }
+  .form-text p {
+    line-height: 1.5rem;
+  }
+  
+  .icon {
+    background: transparent no-repeat center;
+    background-size: contain;
+    background-origin: content-box;
+    width: 60px;
+    height: 60px;
+    padding: 15px;
+    border: none;
+    transition: transform 0.5s ease;
+  }
+  
+  .icon:hover {
+    transform: scale(0.9);
+  }
+  @media (min-width:1300px){
+    .form-image-solid {
+      width: 70%;
+      margin-left: -70px;
+      margin-right: 20px;
+    }
+  }
+  @media (max-width: 1300px) {
+    .form-bg{
+      display: none;
+    }
+    .container {
+      flex-direction: column;
+    }
+    .container{
+      background: #142133;
+      box-shadow: 0 25px 45px rgb(0 0 0 / 10%);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 15px;
+      align-items:center !important;
+      margin-top: 25%;
+    }
+    .form-image {
+      height: 40%;
+      width: calc(100% - 90px) !important;
+    }
+    .form-image-solid{
+      height: 200px;
+      width: inherit;
+    }
+    .form-text{
+      margin-top: 10px !important;
+    }
+  }
+  @media (max-width:600px) {
+    .container{
+      margin-top: 15%;
+    }
+    
+  }
+  
+  @keyframes loadProfile {
+   from{
+      transform: translateY(100px);
+      opacity: 0;
+    }
+   to {
+       transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes loadProfileImage {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+   to {
+       transform: translateY(0px);
+      opacity: 1;
+    }
+  }

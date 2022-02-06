@@ -1,0 +1,127 @@
+.list-creative{
+    padding-right: 2%;
+}
+.table-container{
+    font-weight: 300;
+    line-height: 1.42em;
+    text-align: left;
+    overflow-y: auto;
+    width: 100%;
+}
+  
+  
+  h2 a {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #FB667A;
+    text-decoration: none;
+  }
+
+.table-container tr{
+    background-color: #2c344669;
+}
+.table-container th{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.table-container th svg{
+    cursor: pointer;
+    float: right;
+}
+.table-container thead tr {
+    background-color: transparent !important;
+}
+.table-container td, .table-container th{
+    padding:5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.table-container tr:hover {
+    background-color: #3d496369;
+    -webkit-box-shadow: 0 6px 6px -6px #0E1119;
+    -moz-box-shadow: 0 6px 6px -6px #0E1119;
+    box-shadow: 0 6px 6px -6px #0E1119;
+}
+
+table{
+    border: none  !important;
+    outline: none;
+    color:  rgba(255,255,255,0.7) !important; 
+}
+tbody tr,tbody td{
+    border: none !important;
+    border-top: 5px solid #031426 !important;
+    margin-top: 10px !important;
+}
+.rank-weekly, .saved-data{
+    margin-top: 10px;
+    border-radius: 5px;
+    height: 100px;
+    width: 100%;
+    margin-bottom: 20px;
+    background: #3d496369;
+    box-shadow: 0 25px 45px -20px #3d496369;
+    padding: 10px;
+    padding-top: 25px;
+    cursor: pointer;
+}
+
+.rank-weekly img, .saved-data img{
+    max-width: 20%;
+    float: right;
+    margin-top: -50px;
+    -webkit-filter: drop-shadow(5px 5px 5px #295572);
+    filter: drop-shadow(5px 5px 5px #295572);
+}
+.rank-weekly{
+    margin-right: 20px;
+}
+
+@media (min-width:1040px){
+    .table-container td, .table-container th {
+      padding-right: 30px;
+    }
+}
+@media (max-width:845px){
+    .rank-weekly img, .saved-data img{
+        max-width: 40%;
+    }
+    .rank-weekly span{
+        float: left;
+        max-width: 200px;
+    }
+    .table-outer-container{
+        max-width: 100%;
+        overflow-x: scroll;
+    }
+    .table-container{
+        width: 800px;
+    }
+}
+@media (max-width:771px){
+    .rank-weekly img{
+        margin-top:-90px;
+    }
+}
+@media (max-width:525px){
+    .saved-data img{
+      margin-top:-40px;
+    }
+    .rank-weekly img{
+        margin-top: -70px;
+    }
+    .saved-data img, .rank-weekly img{
+        margin-right: -20px;
+    } 
+}
+
+@media (max-width:425px){
+    .saved-data, .rank-weekly{
+        padding-top: 10px;
+    } 
+}
+.no-data{
+    margin-top:50px;
+}

@@ -1,0 +1,22 @@
+.loader {
+    display: inline-block;
+    width: 230px;
+    height: 230px;
+    margin-top: 20px;
+    animation: move 3s ease infinite;
+}
+.loader img{
+    width: 80%;
+}
+.loading{
+    display:block;
+    text-align: center;
+}
+@keyframes move {
+  0%, 100% {
+    transform: translateY(30px);
+  }
+  50% {
+    transform: translateY(-40px);
+  }
+}
